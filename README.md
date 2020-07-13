@@ -1,2 +1,1 @@
-# truba-server
-Truba
+# Türk Ulusal Bilim e-Altyapısı (TRUBA)
