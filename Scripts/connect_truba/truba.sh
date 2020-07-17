@@ -34,7 +34,7 @@ expect <(cat <<'EOD'
         "*password:*"  { send "$password\r"; interact }
         }
         exit -onexit {
-                exec sudo pkill -9 openvpn
+                #exec sudo pkill -9 openvpn
                 puts "Bye bye!"
         }
 EOD
@@ -64,7 +64,7 @@ expect {
 }
 
 exit -onexit {
-        exec sudo pkill -9 openvpn
+        #exec sudo pkill -9 openvpn
         puts "Bye bye!"
 }
 EOD
