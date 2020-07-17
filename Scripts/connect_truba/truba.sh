@@ -23,7 +23,7 @@ fix_truba(){
 start_truba(){
 expect <(cat <<'EOD'
         set basedir [file normalize [file dirname $argv0]]
-        set secret_file [open "/home/emr/.dotfiles/.ssh/truba/auth_truba" r]
+        set secret_file [open "/path/to/auth_truba" r]
         gets $secret_file username; gets $secret_file password; gets $secret_file ip; gets $secret_file ovpn
         close $secret_file
 
@@ -47,7 +47,7 @@ start_with_vpn(){
 expect <(cat <<'EOD'
 
 set basedir [file normalize [file dirname $argv0]]
-set secret_file [open "/home/emr/.dotfiles/.ssh/truba/auth_truba" r]
+set secret_file [open "/path/to/auth_truba" r]
 gets $secret_file username; gets $secret_file password; gets $secret_file ip; gets $secret_file ovpn
 close $secret_file
 
