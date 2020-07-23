@@ -1,6 +1,6 @@
-#TRUBA SERVER'DA İŞ OLUŞTURMA
+# TRUBA SERVER'DA İŞ OLUŞTURMA
 
-#####Örnek iş başlığı:
+##### Örnek iş başlığı:
 ```bash
 #!/bin/bash
 #SBATCH --job-name is_ismi
