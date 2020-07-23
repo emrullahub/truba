@@ -35,7 +35,8 @@
 **Örnek**:
 Zaman, "dakika", "dakika:saniye", "saat:dakika:saniye", "gün-saat", "gün-saat:dakika" ve "gün-saat:dakika:saniye" formatlarında belirtilebilir.
 
-```#SBATCH --time=12-05:35:40```
+``` #SBATCH --time=12-05:35:40``` 
+
 Verilen örnekte scriptin en uzun çalışma süresi 12 gün 5 saat 35 dakika 40 saniyedir.
 
 
