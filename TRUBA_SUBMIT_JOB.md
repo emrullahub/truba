@@ -61,10 +61,9 @@ Hesaplama sırasında, kullanılacak çekirdeklerin kaç farklı node tarafında
 ### SBATCH -mail-user
 Yukarıda tanımlanan durumlarda e-postanın gönderileceği adresi tanımlar.
 
-Örnek:``` 
-#SBATCH -mail-type=END
--
-#SBATCH -mail-user=emrullahyilmazg@gmail.com```
+Örnek:
+`<#SBATCH -mail-type=END
+#SBATCH -mail-user=emrullahyilmazg@gmail.com>`
 
 Bu örnek, iş bittiği (END) zaman emrullahyilmazg@gmail.com mail adresine bildirim gönderecektir.
 
