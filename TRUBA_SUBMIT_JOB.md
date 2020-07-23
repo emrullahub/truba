@@ -21,7 +21,7 @@
 
 ```#SBATCH --job-name is_ismi```
 
-### SBATCH -p -> İşin çalıştırılacağı kuyruk adı (partition)
+### SBATCH -p → İşin çalıştırılacağı kuyruk adı (partition)
 
 [Truba partitions bilgileri için tıklayın.](http://wiki.truba.gov.tr/index.php/TRUBA-levrek#Kuyruklar_.28Partitions.29)
 
