@@ -24,18 +24,18 @@
 ### SBATCH -p -> İşin çalıştırılacağı kuyruk adı (partition)
 
 [Truba partitions bilgileri için tıklayın.](http://wiki.truba.gov.tr/index.php/TRUBA-levrek#Kuyruklar_.28Partitions.29)
-Örnek:
-```bash
-#SBATCH --partition single```
-
-###SBATCH --time
--İşin en fazla ne kadar süre çalışacağını belirtir. Bu süre zarfında tamamlanmamış olan işler, zaman dolduğunda otomatik olarak bitirilir. Burada verilecek değer ilgili kuyruğun sınırından yüksek olamaz (bkz. Kuyruklar - iş süreleri). Herhangi bir değer verilmeden gönderilen işler, çalışmaya başladıktan 1 dakika sonrasında sistem tarafından otomatik olarak sonlandırılır.
 
 Örnek:
+
+```#SBATCH --partition single```
+
+### SBATCH --time
+- İşin en fazla ne kadar süre çalışacağını belirtir. Bu süre zarfında tamamlanmamış olan işler, zaman dolduğunda otomatik olarak bitirilir. Burada verilecek değer ilgili kuyruğun sınırından yüksek olamaz (bkz. Kuyruklar - iş süreleri). Herhangi bir değer verilmeden gönderilen işler, çalışmaya başladıktan 1 dakika sonrasında sistem tarafından otomatik olarak sonlandırılır.
+
+**Örnek**:
 Zaman, "dakika", "dakika:saniye", "saat:dakika:saniye", "gün-saat", "gün-saat:dakika" ve "gün-saat:dakika:saniye" formatlarında belirtilebilir.
 
-```bash
-#SBATCH --time=12-05:35:40```
+```#SBATCH --time=12-05:35:40```
 Verilen örnekte scriptin en uzun çalışma süresi 12 gün 5 saat 35 dakika 40 saniyedir.
 
 
