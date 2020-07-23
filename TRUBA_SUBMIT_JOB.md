@@ -62,43 +62,55 @@ Hesaplama sırasında, kullanılacak çekirdeklerin kaç farklı node tarafında
 Yukarıda tanımlanan durumlarda e-postanın gönderileceği adresi tanımlar.
 
 Örnek:
-`<#SBATCH -mail-type=END
-#SBATCH -mail-user=emrullahyilmazg@gmail.com>`
+```
+#SBATCH -mail-type=END
+#SBATCH -mail-user=emrullahyilmazg@gmail.com
+```
 
 Bu örnek, iş bittiği (END) zaman emrullahyilmazg@gmail.com mail adresine bildirim gönderecektir.
 
-   ##TERMİNAL’DEKİ KOMUTLAR
+   ## TERMİNAL’DEKİ KOMUTLAR
 
 **squeue**
+
 Kullanıcının kuyrukta bekleyen ve çalışan işlerini görüntüler. Kullanılacak ek parametrelerle, listelenecek bilginin türü ve miktarı değiştirilebilir. Kullanıcının tüm işleri listelenebileceği gibi (varsayılan), işin iş numarası parametre olarak verilerek, o işe özel bilgilerin dökümü de alınabilir.
 
 Örnek:
-```bash
-emyilmaz@levrek1:[~/study-class]: squeue -u emyilmaz```
-```bash
+
+```
+emyilmaz@levrek1:[~/study-class]: squeue -u emyilmaz
+```
+
+```
 JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
 3528522    single          job1.sh   emyilmaz  R    1:12      1 		levrek147
-3528523    single          job2.sh   emyilmaz  R    1:12      1 		levrek147```
+3528523    single          job2.sh   emyilmaz  R    1:12      1 		levrek147
+```
 
 Örnekte -u --user olarak da açılabilir. Yukarıdaki komut emyilmaz kullanıcısının çalıştırdığı işleri getir anlamına gelmektedir.
 
-
 **sbatch**
+
 Hazırlanan işi(ornek.sh, ornek2.sh) serverda başlatmak üzere kullanılır.
-```bash
-emyilmaz@levrek1:[~/study-class]: sbatch ornek.sh```
+```
+emyilmaz@levrek1:[~/study-class]: sbatch ornek.sh
+```
 
 ```
 sbatch: 1 çekirdekli isler sadece Single ve Mercan kuyruklarina gönderilebilir. İşiniz Single kuyruğuna yonlendirilmistir.
-Submitted batch job 3528522```
+Submitted batch job 3528522
+```
 
 Başka örnek:
-```bash
-emyilmaz@levrek1:[~/study-class]: sbatch ornek2.sh```
+
+```
+emyilmaz@levrek1:[~/study-class]: sbatch ornek2.sh
+```
 
 ```
 sbatch: 1 cekirdekli isler sadece Single ve Mercan kuyruklarina gönderilebilir. İşiniz Single kuyruğuna yonlendirilmistir.
-Submitted batch job 352852```
+Submitted batch job 352852
+```
 
 **scancel** 
 Kuyrukta sırada bekleyen ya da o anda çalışmakta olan işleri iptal etmek için kullanılır. İki şekilde kullanabiliriz: 
