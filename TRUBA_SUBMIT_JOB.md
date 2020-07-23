@@ -18,6 +18,7 @@
 ### SBATCH -J → İşin adı.
 
 Örnek:
+
 ```#SBATCH --job-name is_ismi```
 
 ### SBATCH -p -> İşin çalıştırılacağı kuyruk adı (partition)
