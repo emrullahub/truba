@@ -114,48 +114,62 @@ Submitted batch job 352852
 
 **scancel** 
 Kuyrukta sırada bekleyen ya da o anda çalışmakta olan işleri iptal etmek için kullanılır. İki şekilde kullanabiliriz: 
-```bash 
-emyilmaz@levrek1:[~/study-class]: squeue```
+
+```
+emyilmaz@levrek1:[~/study-class]: squeue
+```
+
 ```
 JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-3528621    single 		  ornek.sh emyilmaz  R    0:27      1 			levrek147```
+3528621    single 		  ornek.sh emyilmaz  R    0:27      1 			levrek147
+```
 
 - Verdiğimiz iş ismine göre iptal edebiliriz.
-```bash
-emyilmaz@levrek1:[~/study-class]: scancel --name=ornek.sh```
 
-```bash
-emyilmaz@levrek1:[~/study-class]: squeue```
-```bash
+```
+emyilmaz@levrek1:[~/study-class]: scancel --name=ornek.sh
+```
+
+```
+emyilmaz@levrek1:[~/study-class]: squeue
+```
+
+```
 JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-emyilmaz@levrek1:[~/study-class]:```
+emyilmaz@levrek1:[~/study-class]:
+```
 
 - Otomatik atanan iş ID numarasına göre iptal edebiliriz.
-```bash
-emyilmaz@levrek1:[~/study-class]: squeue```
-```bash
+
+```
+emyilmaz@levrek1:[~/study-class]: squeue
+```
+
+```
 JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-3528626    single        ornek.sh emyilmaz PD   0:00      1         (Priority)```
+3528626    single        ornek.sh emyilmaz PD   0:00      1         (Priority)
+```
 
-```bash
-emyilmaz@levrek1:[~/study-class]: scancel 3528626```
+```
+emyilmaz@levrek1:[~/study-class]: scancel 3528626
+```
 
-```bash
+```
 emyilmaz@levrek1:[~/study-class]: squeue
          JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
 
-emyilmaz@levrek1:[~/study-class]:```
-
-
-
+emyilmaz@levrek1:[~/study-class]:
+```
 
 **sinfo**
 İş kuyruklarının güncel kullanım durumunu ekrana basar. Buradan alınacak bilgi ile kuyruğa gönderilecek işin kaynak miktarı planlanarak en hızlı şekilde başlayabileceği kuyruğa yönlendirilebilir.Kullanılacak ek parametrelerle, listelenecek bilginin türü ve miktarı değiştirilebilir.
 Kuyrukların kullanım durumuna, paylaşılan dolu yada boş olan node ve çekirdeklerin durumuna “sinfo” komutu ile erişilebilir.
 
-```bash
-emyilmaz@levrek1:[~/study-class]: sinfo --nodes=levrek```
-```bash 
+```
+emyilmaz@levrek1:[~/study-class]: sinfo --nodes=levrek
+```
+
+``` 
 PARTITION     AVAIL  TIMELIMIT  NODES  STATE NODELIST
 mercan*          up 15-00:00:0      0    n/a 
 single           up 15-00:00:0      0    n/a 
@@ -170,28 +184,36 @@ short            up    4:00:00      0    n/a
 mid1             up 4-00:00:00      0    n/a 
 mid2             up 8-00:00:00      0    n/a 
 long             up 15-00:00:0      0    n/a 
-debug            up      15:00      0    n/a```
+debug            up      15:00      0    n/a
+```
 
-```bash
+```
 emyilmaz@levrek1:[~/study-class]: sinfo --nodes=levrek | wc -l
-15```
+15
+```
 
 **Not: wc -l → Listedeki satır sayısını verir. Sonuçta 14 satır + header ile toplam 15 satır yer alır.**
 
 **scontrol**
+
 Herhangi bir kuyruğun bilgisine aşağıdaki komutla erişilebilir:
-```bash
-scontrol show partition=kuyruk_adi```
+
+```
+scontrol show partition=kuyruk_adi
+```
+
 ###TRUBA SERVER’A MODÜL YÜKLEME
 
-```bash
-mod | grep modül ismi```
+```
+mod | grep modül ismi
+```
 
 (module avail | grep “modül ismi” → bu komut hata verdiği için düzenlendi.) İstediğimiz modülün serverda var olup olmadığını ya da versiyon kontrolü yapmak istediğimiz zaman kullanılır.
 
-```bash
-module load modul_ismi```
+```
+module load modul_ismi
+```
+
 Modülü servera yüklemek için kullanılır.
 
 [Daha fazla bilgi edinmek için tıklayın.](http://wiki.truba.gov.tr/index.php/TRUBA-levrek)
-
