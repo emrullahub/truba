@@ -39,34 +39,32 @@ Zaman, "dakika", "dakika:saniye", "saat:dakika:saniye", "gün-saat", "gün-saat:
 
 Verilen örnekte scriptin en uzun çalışma süresi 12 gün 5 saat 35 dakika 40 saniyedir.
 
-
-
-###SBATCH -c
+### SBATCH -c
 
 Bir iş için kullanılabilecek en fazla çekirdek sayısını belirtir (cores per task). Default=1. Değeri bir sunucudaki çekirdek sayısından fazla olamaz.
 
-###SBATCH --threads
+### SBATCH --threads
 İşlemcilerin hyperthreading özelliklerini kullanmak için tanımlanır. Mevcut işlemcilerde çekirdek başına 2 thread düşmektedir.
 
-###SBATCH --mem
+### SBATCH --mem
 Bu parametre ile iş için toplamda en fazla ne kadar bellek kullanılacağı belirtilmektedir. Kullanımı zorunlu değildir.
 
-###SBATCH -N
+### SBATCH -N
 Hesaplama sırasında, kullanılacak çekirdeklerin kaç farklı node tarafından sağlanacağını belirler. Herhangi bir tanım girilmemişse, çekirdekler rastgele sayındaki nodelardan rastgele sayıda sağlanırlar. Node sayısı için herhangi bir tanımlama yapmamak işlerin mümkün olan en hızlı şekilde başlamasını sağlar, ancak performans testlerinde alıncak sonuç, her iş için farklı olabilir.
 
-
-###SBATCH –workdir
+### SBATCH –workdir
 İşin başlayıp, output err dosyalarının yazılacağı dizinin adresidir. Eğer herhangi bir tanımlama yapılmaz ise, varsayılan olarak iş gönderilirken o an içinde bulunan dizin workdir dizini olarak kabul edilir.
 
-###SBATCH -mail-type
+### SBATCH -mail-type
 İş kuyruğa gönderildikten sonra, iş ile ilgili ne tür e-postaların gönderileceğini tanımlar. BEGIN, END, FAIL, REQUEUE, ALL değerlerini alabilir. Herhangi bir tanım yapılmaz ise kullanıcı e-posta ile bilgilendirilmez.
 
-###SBATCH -mail-user
+### SBATCH -mail-user
 Yukarıda tanımlanan durumlarda e-postanın gönderileceği adresi tanımlar.
-Örnek:
-```bash
+
+Örnek:``` 
 #SBATCH -mail-type=END
 #SBATCH -mail-user=emrullahyilmazg@gmail.com```
+
 Bu örnek, iş bittiği (END) zaman emrullahyilmazg@gmail.com mail adresine bildirim gönderecektir.
 
    ##TERMİNAL’DEKİ KOMUTLAR
