@@ -21,7 +21,7 @@
 
 ```#SBATCH --job-name is_ismi```
 
-### SBATCH -p → İşin çalıştırılacağı kuyruk adı (partition)
+### SBATCH -p -> İşin çalıştırılacağı kuyruk adı (partition)
 
 [Truba partitions bilgileri için tıklayın.](http://wiki.truba.gov.tr/index.php/TRUBA-levrek#Kuyruklar_.28Partitions.29)
 
@@ -97,7 +97,6 @@ emyilmaz@levrek1:[~/study-class]: sbatch ornek.sh
 ```
 
 ```
-sbatch: 1 çekirdekli isler sadece Single ve Mercan kuyruklarina gönderilebilir. İşiniz Single kuyruğuna yonlendirilmistir.
 Submitted batch job 3528522
 ```
 
@@ -108,7 +107,6 @@ emyilmaz@levrek1:[~/study-class]: sbatch ornek2.sh
 ```
 
 ```
-sbatch: 1 cekirdekli isler sadece Single ve Mercan kuyruklarina gönderilebilir. İşiniz Single kuyruğuna yonlendirilmistir.
 Submitted batch job 352852
 ```
 
@@ -209,6 +207,8 @@ scontrol show partition=kuyruk_adi
 ```
 mod | grep modül ismi
 ```
+
+mod = module avail komutu error olarak algılandığı için mod isimli alias'a atadık ve output dosyasına ekledik.
 
 (module avail | grep “modül ismi” → bu komut hata verdiği için düzenlendi.) İstediğimiz modülün serverda var olup olmadığını ya da versiyon kontrolü yapmak istediğimiz zaman kullanılır.
 
