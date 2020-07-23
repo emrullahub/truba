@@ -23,7 +23,9 @@
 
 ### SBATCH -p -> İşin çalıştırılacağı kuyruk adı (partition)
 
-[Truba partitions bilgileri için tıklayın.](http://wiki.truba.gov.tr/index.php/TRUBA-levrek#Kuyruklar_.28Partitions.29)
+[Kuyruklar(partitions) tablosu için tıklayın.](https://github.com/isinaltinkaya/truba/raw/master/partitions.png)
+
+
 
 Örnek:
 
