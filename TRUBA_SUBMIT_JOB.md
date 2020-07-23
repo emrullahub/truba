@@ -204,7 +204,7 @@ Herhangi bir kuyruğun bilgisine aşağıdaki komutla erişilebilir:
 scontrol show partition=kuyruk_adi
 ```
 
-###TRUBA SERVER’A MODÜL YÜKLEME
+### TRUBA SERVER’A MODÜL YÜKLEME
 
 ```
 mod | grep modül ismi
