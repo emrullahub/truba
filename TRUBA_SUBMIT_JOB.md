@@ -192,7 +192,9 @@ emyilmaz@levrek1:[~/study-class]: sinfo --nodes=levrek | wc -l
 15
 ```
 
-**Not: wc -l → Listedeki satır sayısını verir. Sonuçta 14 satır + header ile toplam 15 satır yer alır.**
+**Not: wc -l 
+
+   Listedeki satır sayısını verir. Sonuçta 14 satır + header ile toplam 15 satır yer alır.**
 
 **scontrol**
 
