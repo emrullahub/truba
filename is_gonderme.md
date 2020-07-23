@@ -1,4 +1,4 @@
-# TRUBA SERVER'DA İŞ OLUŞTURMA
+# TRUBA SERVER'DA İŞ OLUŞTURMA VE GÖNDERME
 
 ##### Örnek iş başlığı:
 ```bash
