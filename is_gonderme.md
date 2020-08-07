@@ -23,7 +23,7 @@
 
 ### SBATCH -p -> İşin çalıştırılacağı kuyruk adı (partition)
 
-![Kuyruklar(partitions) tablosu için tıklayın.](https://github.com/isinaltinkaya/truba/raw/master/partitions.png)
+![Kuyruklar(partitions) tablosu için tıklayın.](https://github.com/isinaltinkaya/truba/raw/master/Images/partitions.png)
 
 
 
