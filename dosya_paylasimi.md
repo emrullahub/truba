@@ -10,4 +10,4 @@ Dosya paylaşımı yaparken `setfacl` komutunu kullanabilirsiniz. Bu komut sudo 
 
 `setfacl -Rdm u:username:rwx PATH/TO/FILE`
 
-Yukarıdaki kodda -R ya da --recursive seçeneğiyle dosyaya verdiğimiz tüm default izinleri tüm alt dosyalara ve dökümanlara verecektir.
+`-R` ya da `--recursive` dosyaya verdiğimiz tüm default izinlerin tüm alt dosyalara ve dökümanlara verilmesini sağlar.
