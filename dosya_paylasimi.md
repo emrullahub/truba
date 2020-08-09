@@ -8,4 +8,6 @@ Dosya paylaşımı yaparken `setfacl` komutunu kullanabilirsiniz. Bu komut sudo 
 
 `d` yetkisi verildiğinde default acl tanımlaması yapılır, bu da o dizin altında açılacak yeni dosya veya alt dizinlerde verilen yetkinin otomatik olarak tanımlanmasını sağlar.
 
-`setfacl -m u:username:rwx PATH/TO/FILE`
+`setfacl -Rdm u:username:rwx PATH/TO/FILE`
+
+Yukarıdaki kodda -R ya da --recursive seçeneğiyle dosyaya verdiğimiz tüm default izinleri tüm alt dosyalara ve dökümanlara verecektir.
