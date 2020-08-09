@@ -206,18 +206,25 @@ scontrol show partition=kuyruk_adi
 
 ### TRUBA SERVER’A MODÜL YÜKLEME
 
-```
-mod | grep modül ismi
-```
+İhtiyacımız olan modülün kümede mevcut olup olmadığını kontrol etmek için aşağıdaki komut kullanılır:
 
-mod = module avail komutu error olarak algılandığı için mod isimli alias'a atadık ve output dosyasına ekledik.
+`module avail 2>&1 | grep modul_ısmı`
 
-(module avail | grep “modül ismi” → bu komut hata verdiği için düzenlendi.) İstediğimiz modülün serverda var olup olmadığını ya da versiyon kontrolü yapmak istediğimiz zaman kullanılır.
+Bu komutu basitleştirmek için `.bashrc` dosyamıza şu şekilde bir alias koyabiliriz:
+
+`alias mod="module avail 2>&1"`
+
+Böylece komutumuz şu şekilde basitleşmiş olur:
+
+`mod | grep modul_ismi`
+
+
+
+Modülü kümeye yüklemek için:
 
 ```
 module load modul_ismi
 ```
-
-Modülü servera yüklemek için kullanılır.
+komutu kullanılır.
 
 [Daha fazla bilgi edinmek için tıklayın.](http://wiki.truba.gov.tr/index.php/TRUBA-levrek)
